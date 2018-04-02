@@ -1,0 +1,4 @@
+*.aux
+*.log
+*.swp
+.DS_Store
