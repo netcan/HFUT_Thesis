@@ -1,13 +1,12 @@
 \documentclass[a4paper]{ltxdoc}
 \usepackage[UTF8, heading=true, scheme=plain, linespread=1.2, zihao=-4, fontset=fandol]{ctex}
-\usepackage{geometry, longtable, parskip, seqsplit, hyperref}
+\usepackage{geometry, longtable, parskip, seqsplit, hyperref, fancyhdr, etoolbox}
 \ctexset{
 	space=auto,
 	section = {
 		format = \centering \heiti \sanhao \bfseries,
 		aftername = \hspace{0.5em},
 		afterindent = true,
-		break = \clearpage,
 	},
 	subsection = {
 		format = \heiti \bfseries,
@@ -20,9 +19,11 @@
 		afterindent = true,
 	},
 }
+
 \geometry{left=3cm, right=3cm, top=2.54cm, bottom=2.54cm}
-\input{command.tex}
 \setmainfont{Times New Roman}
+
+\input{command.tex}
 
 \begin{document}
 \input{cover.tex}
@@ -50,11 +51,21 @@
 \tableofcontents
 }
 
+% 设置页眉
+\newgeometry{left=2.8cm, right=2.8cm, top=3cm, bottom=3cm}
+\fancyhead{}
+\chead{\small 合肥工业大学毕业设计（论文）\vspace{0.3cm}}
+\pagestyle{fancy}
+
 % 正文
 {
+% 重写section指令以便设置section段前1行间距，分页
+\pretocmd{\section}{\clearpage \vspace*{-1.5em}}{}{}
+
 \setlength{\parindent}{2em}
-\setlength{\parskip}{0em}
+\setlength{\parskip}{0.5em}
 \setlength{\baselineskip}{22pt}
+
 \section{绪论}
 \subsection{ＸＸＸＸＸＸ}
 \subsubsection{ＸＸＸＸＸＸ}
