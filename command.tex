@@ -13,5 +13,57 @@
 \newcommand{\liuhao}{\fontsize{7.875pt}{\baselineskip}\selectfont}  % 字号设置
 \newcommand{\qihao}{\fontsize{5.25pt}{\baselineskip}\selectfont}    % 字号设置
 
-% 字体
+% 下划线
 \newcommand{\underlineFixlen}[2][3.5cm]{\underline{\makebox[#1][c]{#2}}}
+
+\newcommand{\keywords}[1][ＸＸＸ；ＸＸＸ；ＸＸＸ；ＸＸＸ；ＸＸＸ]{#1}
+\newcommand{\keywordsEn}[1][×××; ×××; ×××; ×××; ×××]{#1}
+
+% 中文摘要
+\renewenvironment{abstract}{
+\thispagestyle{empty} % 去掉页码
+{
+\begin{center}
+\Large \songti \bfseries 摘\hspace{1em}要\vspace{1.1cm}
+\end{center}
+}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0em}
+\setlength{\baselineskip}{22pt} % （宋体，小四；固定行距22磅，段前、段后均为0行间距。段落首行缩进2字符。）
+\songti
+}{
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+{\par \songti \bfseries{关键词：}}
+\keywords
+\clearpage
+}
+
+% 英文摘要
+\newenvironment{abstractEn}{
+\thispagestyle{empty} % 去掉页码
+{
+\begin{center}
+\Large \bfseries ABSTRACT\vspace{1.5cm}
+\end{center}
+}
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0em}
+\setlength{\baselineskip}{22pt} % 22磅行距，首行缩进1字符，段前、段后均为0行间距
+}{
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+{\par \bfseries{KEYWORDS:}}
+\keywordsEn
+\clearpage
+}
+
+% 目录
+\renewcommand\contentsname{
+{
+\begin{center}
+\songti \Large \bfseries 目\hspace{1em}录 % （宋体，小二号，加粗；居中，单倍行距，段前0.5行、段后1.5行间距）
+\end{center}
+}
+}
+
