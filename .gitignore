@@ -3,4 +3,6 @@
 *.swp
 *.out
 *.toc
+*.blg
+*.bbl
 .DS_Store

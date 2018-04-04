@@ -60,7 +60,7 @@
 % 正文
 {
 % 重写section指令以便设置section段前1行间距，分页
-\pretocmd{\section}{\clearpage \vspace*{-1.5em}}{}{}
+\pretocmd{\section}{\clearpage \vspace*{-2.0em}}{}{}
 
 \setlength{\parindent}{2em}
 \setlength{\parskip}{0.5em}
@@ -76,5 +76,16 @@
 \section{ＸＸＸＸＸＸ}
 
 }
+
+% 参考文献
+{
+\clearpage % 分页
+\phantomsection % 使得hyperref目录能够跳转到正确的位置
+\addcontentsline{toc}{section}{参考文献} % 添加到目录中
+\nocite{*} % 添加所有文献
+\bibliographystyle{unsrt} % 样式
+\bibliography{ref.bib}    % 文献数据库
+}
+
 
 \end{document}
