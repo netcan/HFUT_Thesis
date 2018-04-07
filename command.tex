@@ -73,3 +73,39 @@
 \renewcommand{\cftsecdotsep}{1.5} % section引线
 \renewcommand{\cftsecleader}{\cftdotfill{\cftsecdotsep}}
 \renewcommand{\cftsecpagefont}{}
+
+% 致谢
+\newenvironment{thank}{
+\clearpage
+\vspace*{-2em}
+\phantomsection % 使得hyperref目录能够跳转到正确的位置
+\addcontentsline{toc}{section}{致谢} % 添加到目录中
+\begin{center}
+ \songti \Large \bfseries 致谢\end{center}\vspace{1.1cm}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.5em}
+\setlength{\baselineskip}{22pt} % 22磅行距，首行缩进1字符，段前、段后均为0行间距
+\songti
+\par
+}{
+	\par
+	\hfill 作者：ＸＸＸ
+
+	\hfill \hspace{2em}年\hspace{2em}月\hspace{2em}日
+}
+
+% 附录
+\renewenvironment{appendix}{
+\clearpage
+\vspace*{-2em}
+\phantomsection % 使得hyperref目录能够跳转到正确的位置
+\addcontentsline{toc}{section}{附录} % 添加到目录中
+\begin{center}
+ \songti \Large \bfseries 附录\end{center}\vspace{1.1cm}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.5em}
+\setlength{\baselineskip}{22pt} % 22磅行距，首行缩进1字符，段前、段后均为0行间距
+\songti
+\par
+}{
+}
