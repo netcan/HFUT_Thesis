@@ -58,21 +58,43 @@
 \clearpage
 }
 
-% 目录
+% 目录名
 \renewcommand\contentsname{
-{
 \begin{center}
 \songti \Large \bfseries 目\hspace{1em}录 % （宋体，小二号，加粗；居中，单倍行距，段前0.5行、段后1.5行间距）
 \end{center}
+\vspace{1em}
 }
+% 插图清单
+\renewcommand\listfigurename{
+\begin{center}
+\songti \Large \bfseries 插图清单 % （宋体，小二号，加粗；居中，单倍行距，段前0.5行、段后1.5行间距）
+\end{center}
+\vspace{1em}
+}
+
+% 表格清单
+\renewcommand\listtablename{
+\begin{center}
+\songti \Large \bfseries 表格清单 % （宋体，小二号，加粗；居中，单倍行距，段前0.5行、段后1.5行间距）
+\end{center}
+\vspace{1em}
 }
 
 \renewcommand\refname{\heiti \sanhao \bfseries 参考文献}
 
+
+% 目录引线设置
 \renewcommand{\cftdotsep}{1.5} % 线的密度
 \renewcommand{\cftsecdotsep}{1.5} % section引线
 \renewcommand{\cftsecleader}{\cftdotfill{\cftsecdotsep}}
 \renewcommand{\cftsecpagefont}{}
+
+% 插图清单
+\renewcommand{\cftfigpresnum}{\figurename\enspace}
+
+% 表格清单
+\renewcommand{\cfttabpresnum}{\tablename\enspace}
 
 % 致谢
 \newenvironment{thank}{
@@ -109,3 +131,7 @@
 \par
 }{
 }
+
+% 图名称
+\renewcommand{\figurename}{图}
+\renewcommand{\tablename}{表}

@@ -1,6 +1,18 @@
 \documentclass[a4paper]{ltxdoc}
 \usepackage[UTF8, heading=true, scheme=plain, linespread=1.2, zihao=-4, fontset=fandol]{ctex}
 \usepackage{geometry, parskip, seqsplit, hyperref, fancyhdr, etoolbox, tocloft}
+\usepackage{flafter, chngcntr, caption, multirow}
+
+\counterwithin{figure}{section} % 图的编号按section编排
+\counterwithin{table}{section} % 表的编号按section编排
+\DeclareCaptionFormat{smallformat}{\songti \small #1#2#3} % 宋体，五号
+
+\captionsetup{
+	labelsep=quad, % caption去掉分隔符:
+	textformat=simple,
+	format=smallformat,
+}
+
 \ctexset{
 	space=auto,
 	section = {
@@ -46,9 +58,19 @@
 
 % 目录
 {
-\setcounter{page}{0}
+\tocloftpagestyle{empty}
+\setlength{\cftfignumwidth}{3.5em}
+\setlength{\cfttabnumwidth}{3.5em}
+\clearpage
 \tableofcontents
-\thispagestyle{empty} % 去掉页码
+
+\clearpage
+\listoffigures
+
+\clearpage
+\listoftables
+
+\setcounter{page}{0}
 }
 
 % 设置页眉
@@ -71,11 +93,54 @@
 \subsubsection{ＸＸＸＸＸＸ}
 ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ。
 
-ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ。
+\begin{center}
+	.......\\
+	.......\\
+	.......
+\end{center}
 
 \section{ＸＸＸＸＸＸ}
-here is footnote.\footnote{footnotes working fine}
+图示例
+\begin{figure}[!htb]
+	\centering
+	\includegraphics{images/example_figure1.png}
+	\caption{酶解时间对DH与ACE抑制率的影响}
+\end{figure}
 
+\begin{figure}[!htb]
+	\centering
+	\includegraphics{images/example_figure2.png}
+	\caption{ＸＸＸＸＸＸＸＸＸＸ}
+\end{figure}
+
+\clearpage
+表示例
+\begin{table}[!htb]
+\centering
+\caption{三种肌球蛋白/多糖混合凝胶的红外光谱数据}
+\begin{tabular}{lcccc}
+\hline
+Treatment           & \multicolumn{4}{c}{FT-IR spectra numbers (cm$^{−1}$)} \\ \cline{2-5} 
+                    & PK1        & PK2        & PK3        & PK4       \\ \hline
+Myosin gel          & 3439       & —          & 1655       & 1106      \\
+Myosin+ 1\% KCG gel & 3358       & 3006       & 1655       & 1131      \\
+Myosin+ 1\% LBG gel & 3366       & 3006       & 1655       & 1106      \\
+Myosin+ 1\% WSC gel & 3439       & —          & 1655       & 1106      \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!htb]
+\centering
+\caption{分栏表}
+\begin{tabular}{ccccc}
+\hline
+年度                    & 产品  & 产量    & 销量    & 产值  \\ \hline
+\multirow{2}{*}{2004} & 手机  & 11000 & 10000 & 500 \\
+                      & 计算机 & 1100  & 1000  & 280 \\ \hline
+\multirow{2}{*}{2005} & 手机  & 16000 & 13000 & 550 \\
+                      & 计算机 & 2100  & 1500  & 320 \\ \hline
+\end{tabular}
+\end{table}
 }
 
 % 参考文献
@@ -84,6 +149,7 @@ here is footnote.\footnote{footnotes working fine}
 \phantomsection % 使得hyperref目录能够跳转到正确的位置
 \addcontentsline{toc}{section}{参考文献} % 添加到目录中
 \nocite{*} % 添加所有文献
+%\bibliographystyle{gbt7714-2005} % 样式
 \bibliographystyle{unsrt} % 样式
 \bibliography{ref.bib}    % 文献数据库
 }
