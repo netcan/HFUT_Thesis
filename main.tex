@@ -1,7 +1,12 @@
 \documentclass[a4paper]{ltxdoc}
 \usepackage[UTF8, heading=true, scheme=plain, linespread=1.2, zihao=-4, fontset=fandol]{ctex}
+
+% counterwith重定义问题
+\let\counterwithout\relax
+\let\counterwithin\relax
+
 \usepackage{geometry, parskip, seqsplit, hyperref, fancyhdr, etoolbox, tocloft}
-\usepackage{flafter, chngcntr, caption, multirow}
+\usepackage{flafter, chngcntr, caption, multirow, graphicx}
 
 \counterwithin{figure}{section} % 图的编号按section编排
 \counterwithin{table}{section} % 表的编号按section编排
@@ -35,7 +40,7 @@
 \geometry{left=3cm, right=3cm, top=2.54cm, bottom=2.54cm}
 \setmainfont{Times New Roman}
 
-\input{command.tex}
+\input{macro.tex}
 
 \begin{document}
 \input{cover.tex}
