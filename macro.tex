@@ -1,7 +1,26 @@
 % 模板设置
-\newcommand{\keywords}[1][ＸＸＸ；ＸＸＸ；ＸＸＸ；ＸＸＸ；ＸＸＸ]{#1}
-\newcommand{\keywordsEn}[1][×××; ×××; ×××; ×××; ×××]{#1}
-\newcommand{\type}[1][【设计或者论文】]{#1}
+
+\newcommand{\privacy}[1][密级]{#1} % 密级
+\newcommand{\type}[1][【设计或者论文】]{#1} % 类型
+\newcommand{\titleCn}[1][合肥工业大学学位论文\LaTeX 模板]{#1} % 中文题目
+\newcommand{\titleEn}[1][\LaTeX -basedd HFUT Thesis Template]{#1} % 英文题目
+
+\newcommand{\keywordsCn}[1][ＸＸＸ；ＸＸＸ；ＸＸＸ；ＸＸＸ；ＸＸＸ]{#1} % 中文关键字
+\newcommand{\keywordsEn}[1][×××; ×××; ×××; ×××; ×××]{#1} % 英文关键字
+
+\newcommand{\supervisor}[1][【姓名】【职称】]{#1} % 导师姓名
+\newcommand{\studentID}[1][2014218xxx]{#1} % 学号
+\newcommand{\studentNameCn}[1][Netcan]{#1} % 填写中文姓名
+\newcommand{\studentNameEn}[1][Netcan]{#1} % 填写英文姓名
+
+\newcommand{\finishedYear}[1][XXXX]{#1} % 论文完成日期: 年
+\newcommand{\finishedMonth}[1][XX]{#1} % 论文完成日期: 月
+\newcommand{\finishedDay}[1][XX]{#1} % 论文完成日期: 日
+
+\newcommand{\department}[1][【系全称】]{#1} % 系名称
+\newcommand{\major}[1][【专业全称】]{#1} % 专业名称
+\newcommand{\enrolmentYear}[1][【20XX级】]{#1} % 入学年份
+
 
 
 % 字号设置
@@ -39,7 +58,7 @@
 \setlength{\parindent}{0em}
 \setlength{\parskip}{1em}
 {\par \songti \bfseries{关键词：}}
-\keywords
+\keywordsCn
 \clearpage
 }
 
@@ -101,7 +120,7 @@
 \renewcommand{\cfttabpresnum}{\tablename\enspace}
 
 % 致谢
-\newenvironment{thank}{
+\newenvironment{acknowledge}{
 \clearpage
 \vspace*{-2em}
 \phantomsection % 使得hyperref目录能够跳转到正确的位置
@@ -115,9 +134,9 @@
 \par
 }{
 	\par
-	\hfill 作者：ＸＸＸ
+	\hfill 作者：\studentNameCn
 
-	\hfill \hspace{2em}年\hspace{2em}月\hspace{2em}日
+	\hfill \finishedYear\enspace 年\finishedMonth\enspace 月\finishedDay\enspace 日
 }
 
 % 附录

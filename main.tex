@@ -12,6 +12,8 @@
 \counterwithin{table}{section} % 表的编号按section编排
 \DeclareCaptionFormat{smallformat}{\songti \small #1#2#3} % 宋体，五号
 
+\input{macro.tex}
+
 \captionsetup{
 	labelsep=quad, % caption去掉分隔符:
 	textformat=simple,
@@ -40,7 +42,6 @@
 \geometry{left=3cm, right=3cm, top=2.54cm, bottom=2.54cm}
 \setmainfont{Times New Roman}
 
-\input{macro.tex}
 
 \begin{document}
 \input{cover.tex}
@@ -160,11 +161,11 @@ Myosin+ 1\% WSC gel & 3439       & —          & 1655       & 1106      \\ \hli
 }
 
 % 致谢
-\begin{thank}
+\begin{acknowledge}
 本论文是在指导老师ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ。
 
 ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ。
-\end{thank}
+\end{acknowledge}
 
 % 附录，必要时
 \begin{appendix}
