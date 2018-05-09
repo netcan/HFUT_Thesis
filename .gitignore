@@ -8,4 +8,5 @@
 *.blg
 *.xdv
 *.bbl
+_minted-main
 .DS_Store

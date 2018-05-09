@@ -1,11 +1,12 @@
 main.pdf: main.tex main.aux main.bbl
-	xelatex $<
+	xelatex -shell-escape $<
 
 main.aux: main.tex
-	xelatex -no-pdf $<
+	xelatex -shell-escape -no-pdf $<
 
 main.bbl: main.aux
 	bibtex $<
 
 clean:
-	rm -f *.aux *.log *.swp *.lof *.lot *.out *.toc *.blg *.bbl *.xdv
+	rm -f *.aux *.log *.swp *.lof *.lot *.out *.toc *.blg *.bbl *.xdv tex/*.aux
+	rm -rf _minted-main
