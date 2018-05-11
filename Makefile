@@ -1,4 +1,5 @@
 main.pdf: main.tex main.aux main.bbl
+	xelatex -shell-escape -no-pdf $<
 	xelatex -shell-escape $<
 
 main.aux: main.tex
