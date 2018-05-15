@@ -72,6 +72,8 @@
 \setlength{\cfttabnumwidth}{3.5em}
 \clearpage
 \tableofcontents
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+\pagenumbering{gobble}
 
 \clearpage
 \listoffigures
@@ -79,7 +81,7 @@
 \clearpage
 \listoftables
 
-\setcounter{page}{0}
+\pagenumbering{arabic}
 }
 
 % 设置页眉
@@ -90,6 +92,7 @@
 
 % 正文
 {
+\setcounter{page}{1}
 % 重写section指令以便设置section段前1行间距，分页
 \pretocmd{\section}{\clearpage \vspace*{-2.0em}}{}{}
 
