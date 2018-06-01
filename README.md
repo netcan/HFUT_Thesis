@@ -36,3 +36,6 @@
 ```bash
 make
 ```
+
+Windows用户：双击./build.bat编译成pdf。
+
