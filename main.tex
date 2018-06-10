@@ -9,6 +9,7 @@
 \usepackage{geometry, parskip, seqsplit, fancyhdr, etoolbox, tocloft}
 \usepackage{flafter, chngcntr, caption, multirow, graphicx}
 \usepackage{minted} % 代码高亮模块，若不需要就删去
+\usepackage[bottom]{footmisc} % 脚注放到页面最底部
 
 \counterwithin{figure}{section} % 图的编号按section编排
 \counterwithin{table}{section} % 表的编号按section编排
@@ -112,7 +113,7 @@
 \end{center}
 
 \section{ＸＸＸＸＸＸ}
-代码示例
+代码示例\footnote{这是脚注}
 \begin{minted}[
 	frame=lines,
 	framesep=2mm,
