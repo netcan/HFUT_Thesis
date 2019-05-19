@@ -1,0 +1,67 @@
+
+"latex-workshop.latex.tools": [
+    {
+        "name": "xelatex",
+        "command": "xelatex",
+        "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-shell-escape",
+            "-file-line-error",
+            "-pdf",
+            "%DOC%"
+        ]
+    },
+    {
+        "name": "latexmk",
+        "command": "latexmk",
+        "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-shell-escape",
+            "-file-line-error",
+            "-pdf",
+            "%DOC%"
+        ]
+    },
+    {
+        "name": "pdflatex",
+        "command": "pdflatex",
+        "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-shell-escape",
+            "-file-line-error",
+            "%DOC%"
+        ]
+    },
+    {
+        "name": "bibtex",
+        "command": "bibtex",
+        "args": [
+            "%DOCFILE%"
+        ]
+    }
+],
+"latex-workshop.latex.recipes": [
+    {
+        "name": "xelatex -> bibtex",
+        "tools": [
+            "xelatex",
+            "bibtex"
+        ]
+    },
+    {
+        "name": "pdflatex -> bibtex -> pdflatex*2",
+        "tools": [
+            "pdflatex",
+            "bibtex",
+            "pdflatex",
+            "pdflatex"
+        ]
+    }
+],
+"latex-workshop.view.pdf.viewer": "tab",
+"python.pythonPath": "/home/username/anaconda3/bin/python",
+"window.zoomLevel": 1,
+"editor.minimap.enabled": false
