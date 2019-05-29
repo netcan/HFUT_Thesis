@@ -1,51 +1,43 @@
 ## 合肥工业大学毕业设计（论文）模板
 
-- 使用方法请看原作者的项目[netcan/HFUT_Thesis: 合肥工业大学毕业设计（论文）模板](https://github.com/netcan/HFUT_Thesis)
+### 简介
+1.  感谢学长的项目[netcan/HFUT_Thesis: 合肥工业大学毕业设计（论文）模板](https://github.com/netcan/HFUT_Thesis)
+2.  2015级目前的论文格式如[本科毕业设计论文写作规范示例.doc](./本科毕业设计论文写作规范示例.doc)所示。感谢[AnselCmy](https://github.com/AnselCmy)的帮忙，在原项目的基础上修改了部分格式，主要更改部分如下：
+    - 论文目录间距
+    - 参考文献格式
+    - bibtext的bis文件
+    - 取消subsection字体加粗
+3. 图片插入后格式若存在问题，可修改插入图片方式改为
+    ```latex
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width=.7\textwidth]{images/xxx.png}
+    \caption{xxxxx}
+    \end{figure}
+    ```
 
-- 以下是个人配置备份(ubuntu-18.04环境)
-    1. 配置texlive 参考 [Ubuntu下 TeX Live 2018 的安装与配置](https://blog.csdn.net/engreal/article/details/80704755)
-    2. linux 字体配置(解决Time new roman 字体缺失)其他系统可跳过
-    下载[Fonts](https://pan.baidu.com/s/1hEJ6FTs3yYlgQcz_wWtqSg), 提取码: d4sz 
-    方法：
-        ```shell
-        unzip Fonts.zip
-        sudo cp ./Fonts/* /usr/share/fonts/WindowsFonts
-        sudo chmod 755 /usr/share/fonts/WindowsFonts/*
-        ```
-        更新字体缓存
-        ```shell
-        sudo fc-cache -f -v
-        ```
-        ubuntu下宋体存在部分字体生僻缺失可使用
-        ```latex
-        \setCJKfamilyfont{stsong}{STSong} %使用微软宋体，解决Ubuntu下字体宋体缺失问题
-        \newcommand{\wrsongti}{\CJKfamily{stsong}}
-        ```
-        缺失部分字体使用`\wrsongti 无法识别汉字`进行局部字体更改
-    3. 更改vscode配置文件
-        `ctrl+alt+p`打开`user setting.json` 将
-        `vscode_setting.jsonz`内配置加入其中并重启。
-    4. 本人在main.tex中额外添加的包：
-        ```latex
-        \setCJKfamilyfont{hwxk}{STSong} %ubuntu使用微软宋体，解决部分字体缺失问题
-        \newcommand{\wrsongti}{\CJKfamily{hwxk}}
-        % 加入数学公式
-        \usepackage{amsmath}
-        % 浮动体
-        \usepackage{float}
-        % 列表定义
-        \usepackage{enumitem}
-        % \usepackage{enumerate}
-        % 使用表格
-        \usepackage{array}
-        ```
-    5. 图片浮动插入格式若存在问题，可修改插入图片方式改为
-        ```latex
-        \begin{figure}[H]
-	    \centering
-	    \includegraphics[width=.7\textwidth]{images/xxx.png}
-	    \caption{xxxxx}
-        \end{figure}
-        ```
-    6. latex 数学公式中`|`需要`\mid`替代
+### Ubuntu下配置参考
+1. 配置texlive 参考 [Ubuntu下 TeX Live 2018 的安装与配置](https://blog.csdn.net/engreal/article/details/80704755)
+2. linux 字体配置(解决Time new roman 字体缺失)其他系统可跳过
+下载[Fonts](https://pan.baidu.com/s/1hEJ6FTs3yYlgQcz_wWtqSg), 提取码: d4sz 
+方法：
+    ```shell
+    unzip Fonts.zip
+    sudo cp ./Fonts/* /usr/share/fonts/WindowsFonts
+    sudo chmod 755 /usr/share/fonts/WindowsFonts/*
+    ```
+    更新字体缓存
+    ```shell
+    sudo fc-cache -f -v
+    ```
+    ubuntu下宋体存在部分字体生僻缺失可使用
+    ```latex
+    \setCJKfamilyfont{stsong}{STSong} %使用微软宋体，解决Ubuntu下字体宋体缺失问题
+    \newcommand{\wrsongti}{\CJKfamily{stsong}}
+    ```
+    缺失部分字体使用`\wrsongti 无法识别汉字`进行局部字体更改
+3. 更改vscode配置文件
+    `ctrl+alt+p`打开`user setting.json` 将
+    `vscode_setting.jsonz`内配置加入其中并重启。
+
     

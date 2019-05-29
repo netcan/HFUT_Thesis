@@ -10,6 +10,9 @@
 \usepackage{enumitem}
 % 使用表格
 \usepackage{array}
+% 目录格式
+\usepackage{titletoc}
+\usepackage[toc]{multitoc}
 
 % counterwith重定义问题
 \let\counterwithout\relax
@@ -34,7 +37,6 @@
 	textformat=simple,
 	format=smallformat,
 }
-
 \ctexset{
 	space=auto,
 	section = {
@@ -43,12 +45,13 @@
 		afterindent = true,
 	},
 	subsection = {
-		format = \heiti \bfseries,
+%		format = \heiti \bfseries,
+		format = \heiti \xiaosihao,
 		aftername = \hspace{0.4em},
 		afterindent = true,
 	},
 	subsubsection = {
-		format = \songti \bfseries,
+		format = \songti \bfseries \xiaosihao,
 		aftername = \hspace{0.4em},
 		afterindent = true,
 	},
@@ -79,11 +82,18 @@
 \end{abstractEn}
 
 % 目录
+\begingroup
+\baselineskip=22pt %目录、图片、表格清单间距22pt
 {
 \tocloftpagestyle{empty}
 \setlength{\cftfignumwidth}{3.5em}
 \setlength{\cfttabnumwidth}{3.5em}
 \clearpage
+
+\titlecontents{section}[0em]{\heiti }
+{\thecontentslabel\ }{}
+{\hspace{.5em}\titlerule*[4pt]{$\cdot$}\contentspage}
+
 \tableofcontents
 \addtocontents{toc}{\protect\thispagestyle{empty}}
 \pagenumbering{gobble}
@@ -96,6 +106,7 @@
 
 \pagenumbering{arabic}
 }
+\endgroup
 
 % 设置页眉
 \newgeometry{left=2.8cm, right=2.8cm, top=3cm, bottom=3cm}
@@ -216,6 +227,8 @@ Myosin+ 1\% WSC gel & 3439       & —          & 1655       & 1106      \\ \hli
 \addcontentsline{toc}{section}{参考文献} % 添加到目录中
 \nocite{*} % 添加所有文献
 %\bibliographystyle{gbt7714-2005} % 样式
+\wuhao
+\setlength{\baselineskip}{20pt}
 \bibliographystyle{bib/gbt7714-2005} % 样式
 \bibliography{bib/ref.bib}    % 文献数据库
 }
