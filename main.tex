@@ -13,11 +13,17 @@
 % 目录格式
 \usepackage{titletoc}
 
+% 公式章节编号
+% \makeatletter
+% \@addtoreset{equation}{section}
+% \makeatother
+% \renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
+\numberwithin{equation}{section}
+
+
 % counterwith重定义问题
 \let\counterwithout\relax
 \let\counterwithin\relax
-
-
 
 \usepackage[hidelinks]{hyperref}
 \usepackage{geometry, parskip, seqsplit, fancyhdr, etoolbox, tocloft}
@@ -135,6 +141,12 @@
 \end{center}
 
 \section{ＸＸＸＸＸＸ}
+
+公式示例
+\begin{equation}
+	c_i=f(w \cdot X_{i:i+h-1} +b)
+\end{equation}
+
 代码示例\footnote{这是脚注}
 \begin{minted}[
 	frame=lines,
