@@ -121,7 +121,7 @@ FUNCTION {cap.space}      {" "}
 FUNCTION {cap.period} 		{"\@. "}
 FUNCTION {cap.comma} 			{"\@, "}
 FUNCTION {cap.colon} 			{"\thinspace{}\textnormal{: }"}
-FUNCTION {cap.double.slash} 	{" //\thinspace{}"}
+FUNCTION {cap.double.slash} 	{" .\thinspace{}"}
 FUNCTION {cap.dash} 			{"\thinspace{}\textnormal{--}\thinspace{}"}
 
 % Predefined latex command used to format the style of bibitems
