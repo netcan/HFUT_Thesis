@@ -2,11 +2,14 @@
 
 ### 简介
 1.  感谢学长的项目[netcan/HFUT_Thesis: 合肥工业大学毕业设计（论文）模板](https://github.com/netcan/HFUT_Thesis)
-2.  2015级目前的论文格式如[本科毕业设计论文写作规范示例.doc](./本科毕业设计论文写作规范示例.doc)所示。感谢[AnselCmy](https://github.com/AnselCmy)的帮忙，在原项目的基础上修改了部分格式，主要更改部分如下：
+2.  感谢[RisanLi](https://github.com/RisanLi)提供的json文件
+3.  2015级目前的论文格式如[本科毕业设计论文写作规范示例.doc](./本科毕业设计论文写作规范示例.doc)所示。感谢[AnselCmy](https://github.com/AnselCmy)的帮忙，在原项目的基础上修改了部分格式，主要更改部分如下：
     - `main.tex`中论文目录间距
     - `main.tex`参考文献格式
-    - bibtext的bis文件
+    - bibtext的`gbt7714-2005.bst`文件
     - `main.tex`取消subsection字体加粗
+    - `macro.tex`中修改致谢格式
+4. 感谢实验室成员的测试，`\usepackage{titletoc}`一定要放在其他包前，否则会翻车！！！！
 3. 图片插入后格式若存在问题，可修改插入图片方式改为
     ```latex
     \begin{figure}[H]
