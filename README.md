@@ -9,8 +9,9 @@
     - bibtext的`gbt7714-2005.bst`文件
     - `main.tex`取消subsection字体加粗
     - `macro.tex`中修改致谢格式
+    - `main.tex`中修改公式章节编号
 4. 感谢实验室成员的测试，`\usepackage{titletoc}`一定要放在其他包前，否则会翻车！！！！
-3. 图片插入后格式若存在问题，可修改插入图片方式改为
+5. 图片插入后格式若存在问题，可修改插入图片方式改为
     ```latex
     \begin{figure}[H]
     \centering
