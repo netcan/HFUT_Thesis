@@ -1,3 +1,6 @@
+# 已迁移至[HFUTTUG/HFUT_Thesis](https://github.com/HFUTTUG/HFUT_Thesis)
+
+----
 ## 合肥工业大学毕业设计（论文）模板
 
 ### 简介
